@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML &amp; CSS Cheat Sheet</title>
+  <title>HTML &amp; CSS Cheat Sheet with Examples</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -20,6 +20,11 @@
       margin-top: 1.5rem;
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.25rem;
+    }
+    h3 {
+      margin-top: 1rem;
+      font-size: 1.1em;
+      color: #555;
     }
     .grid {
       display: grid;
@@ -40,6 +45,11 @@
       font-family: Consolas, monospace;
       font-size: 0.95em;
     }
+    pre {
+      background: #f4f4f4;
+      padding: 0.5rem;
+      overflow-x: auto;
+    }
     dt {
       font-weight: bold;
       margin-top: 0.5rem;
@@ -51,8 +61,9 @@
   </style>
 </head>
 <body>
-  <h1>HTML &amp; CSS Cheat Sheet</h1>
+  <h1>HTML &amp; CSS Cheat Sheet with Examples</h1>
   <div class="grid">
+
     <!-- HTML: Document Structure -->
     <div class="box">
       <h2>HTML: Document Structure</h2>
@@ -64,10 +75,11 @@
   &lt;title&gt;Page Title&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  <!-- content -->
+  &lt;!-- content --&gt;
 &lt;/body&gt;
 &lt;/html&gt;
       </code></pre>
+      <!-- the structure itself is the example -->
     </div>
 
     <!-- HTML: Common Elements -->
@@ -81,6 +93,13 @@
         <dt>&lt;blockquote&gt;</dt><dd>Block quotation.</dd>
         <dt>&lt;hr&gt;</dt><dd>Thematic break.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;div&gt;A div block&lt;/div&gt;
+&lt;span&gt;Inline text within a span&lt;/span&gt;
+&lt;blockquote&gt;A quote goes here.&lt;/blockquote&gt;
+&lt;hr /&gt;</code></pre>
     </div>
 
     <!-- HTML: Text Formatting -->
@@ -95,6 +114,16 @@
         <dt>&lt;abbr title="…"&gt;</dt><dd>Abbreviation with tooltip.</dd>
         <dt>&lt;code&gt;, &lt;pre&gt;</dt><dd>Code snippets / preformatted.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>&lt;strong&gt;Bold text&lt;/strong&gt;
+&lt;em&gt;Italic text&lt;/em&gt;
+&lt;b&gt;Also bold&lt;/b&gt; &lt;i&gt;Also italic&lt;/i&gt;
+&lt;u&gt;Underlined&lt;/u&gt;
+&lt;small&gt;Smaller text&lt;/small&gt;
+&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;
+&lt;code&gt;console.log('Hello');&lt;/code&gt;
+&lt;pre&gt;Line 1
+Line 2&lt;/pre&gt;</code></pre>
     </div>
 
     <!-- HTML: Lists -->
@@ -105,9 +134,26 @@
         <dt>&lt;ol&gt; &amp; &lt;li&gt;</dt><dd>Ordered list.</dd>
         <dt>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</dt><dd>Description list.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First step&lt;/li&gt;
+  &lt;li&gt;Second step&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
     </div>
 
-    <!-- HTML: Links & Images -->
+    <!-- HTML: Links & Media -->
     <div class="box">
       <h2>HTML: Links &amp; Media</h2>
       <dl>
@@ -116,6 +162,17 @@
         <dt>&lt;video src controls&gt;&lt;/video&gt;</dt><dd>Video player.</dd>
         <dt>&lt;audio src controls&gt;&lt;/audio&gt;</dt><dd>Audio player.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit example&lt;/a&gt;
+&lt;img src="image.jpg" alt="A sample image" width="200" height="150" /&gt;
+
+&lt;video src="movie.mp4" controls&gt;
+  Your browser does not support video.
+&lt;/video&gt;
+
+&lt;audio src="audio.mp3" controls&gt;
+  Your browser does not support audio.
+&lt;/audio&gt;</code></pre>
     </div>
 
     <!-- HTML: Tables & Forms -->
@@ -127,6 +184,27 @@
         <dt>&lt;input type="text|email|password|checkbox…"&gt;</dt><dd>Inputs.</dd>
         <dt>&lt;textarea&gt;, &lt;select&gt;, &lt;option&gt;, &lt;button type="submit"&gt;</dt><dd>Other controls.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;form action="/submit" method="post"&gt;
+  &lt;label&gt;Email:
+    &lt;input type="email" name="email" required /&gt;
+  &lt;/label&gt;&lt;br/&gt;
+  &lt;label&gt;Message:
+    &lt;textarea name="message"&gt;&lt;/textarea&gt;
+  &lt;/label&gt;&lt;br/&gt;
+  &lt;label&gt;Country:
+    &lt;select name="country"&gt;
+      &lt;option value="us"&gt;USA&lt;/option&gt;
+      &lt;option value="ca"&gt;Canada&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;&lt;br/&gt;
+  &lt;button type="submit"&gt;Send&lt;/button&gt;
+&lt;/form&gt;</code></pre>
     </div>
 
     <!-- CSS: Syntax -->
@@ -135,6 +213,7 @@
       <pre><code>selector {
   property: value;
 }</code></pre>
+      <!-- the syntax itself is the example -->
     </div>
 
     <!-- CSS: Selectors -->
@@ -150,6 +229,23 @@
         <dt>a:hover</dt><dd>Pseudo-class.</dd>
         <dt>p::before</dt><dd>Pseudo-element.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>/* Tag selector */
+h1 { font-size: 2em; }
+/* Class selector */
+.highlight { background-color: yellow; }
+/* ID selector */
+#header { margin: 0 auto; }
+/* Descendant selector */
+ul li { list-style: none; }
+/* Child selector */
+nav > ul { padding: 0; }
+/* Adjacent sibling selector */
+h2 + p { margin-top: 0; }
+/* Pseudo-class */
+a:hover { text-decoration: underline; }
+/* Pseudo-element */
+p::before { content: "Note: "; }</code></pre>
     </div>
 
     <!-- CSS: Box Model -->
@@ -162,6 +258,14 @@
         <dt>width, height</dt><dd>Content box size.</dd>
         <dt>box-sizing</dt><dd>content-box | border-box.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>.box {
+  margin: 10px;
+  border: 2px solid #333;
+  padding: 8px;
+  width: 200px;
+  box-sizing: border-box;
+}</code></pre>
     </div>
 
     <!-- CSS: Typography -->
@@ -176,6 +280,18 @@
         <dt>text-decoration</dt><dd>Underline/line-through.</dd>
         <dt>color</dt><dd>Text color.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222;
+}
+h2 {
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}</code></pre>
     </div>
 
     <!-- CSS: Background & Borders -->
@@ -188,6 +304,14 @@
         <dt>border-radius</dt><dd>Rounded corners.</dd>
         <dt>box-shadow</dt><dd>Shadow effect.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>.card {
+  background-color: #fff;
+  background-image: url("pattern.png");
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}</code></pre>
     </div>
 
     <!-- CSS: Layout -->
@@ -199,6 +323,17 @@
         <dt>top, right, bottom, left</dt><dd>Offsets.</dd>
         <dt>overflow</dt><dd>visible | hidden | scroll | auto.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>.container {
+  display: inline-block;
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  overflow: hidden;
+}</code></pre>
     </div>
 
     <!-- CSS: Flexbox -->
@@ -212,6 +347,17 @@
         <dt>gap</dt><dd>Space between items.</dd>
         <dt>flex: grow shrink basis</dt><dd>Item sizing.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-item {
+  flex: 1 1 0;
+}</code></pre>
     </div>
 
     <!-- CSS: Grid -->
@@ -224,6 +370,16 @@
         <dt>gap</dt><dd>Row/column gap.</dd>
         <dt>grid-area</dt><dd>Named areas.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 100px;
+  gap: 10px;
+}
+.header {
+  grid-area: 1 / 1 / 2 / 3;
+}</code></pre>
     </div>
 
     <!-- CSS: Colors & Units -->
@@ -236,7 +392,16 @@
         <dt>px, em, rem</dt><dd>Absolute &amp; relative sizes.</dd>
         <dt>%, vw, vh</dt><dd>Percent &amp; viewport units.</dd>
       </dl>
+      <h3>Examples</h3>
+      <pre><code>body {
+  color: #333333;
+  background-color: rgba(240,240,240,0.8);
+  border-color: hsl(200, 50%, 50%);
+  font-size: 1rem;   /* based on root */
+  margin: 2vh 5vw;   /* responsive spacing */
+}</code></pre>
     </div>
+
   </div>
 </body>
 </html>
