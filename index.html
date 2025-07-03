@@ -1,407 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>HTML &amp; CSS Cheat Sheet with Examples</title>
+  <meta charset="UTF-8">
+  <title>Last Layer Corner Orientation</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 2rem;
-      background-color: #f9f9f9;
-      color: #333;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      font-family: sans-serif;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      margin-top: 1.5rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.25rem;
-    }
-    h3 {
-      margin-top: 1rem;
-      font-size: 1.1em;
-      color: #555;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
-    }
-    .box {
-      background: #fff;
-      border: 1px solid #e1e1e1;
-      border-radius: 4px;
-      padding: 1rem;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    }
-    code {
-      background: #f4f4f4;
-      padding: 0.2rem 0.4rem;
-      border-radius: 3px;
-      font-family: Consolas, monospace;
-      font-size: 0.95em;
-    }
-    pre {
-      background: #f4f4f4;
-      padding: 0.5rem;
-      overflow-x: auto;
-    }
-    dt {
-      font-weight: bold;
-      margin-top: 0.5rem;
-    }
-    dd {
-      margin-left: 1rem;
-      margin-bottom: 0.5rem;
+    svg {
+      border: 1px solid #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>HTML &amp; CSS Cheat Sheet with Examples</h1>
-  <div class="grid">
 
-    <!-- HTML: Document Structure -->
-    <div class="box">
-      <h2>HTML: Document Structure</h2>
-      <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;!-- content --&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-      </code></pre>
-      <!-- the structure itself is the example -->
-    </div>
+<svg width="600" height="280" viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- CASE 1: 0 CORNERS ORIENTED (2×2 block in top-left) -->
+  <g id="case1" transform="translate(40,20)">
+    <!-- 3×3 grid -->
+    <rect x="0" y="0" width="90" height="90" fill="none" stroke="#000" stroke-width="2"/>
+    <!-- oriented corners -->
+    <rect x="0"   y="0"   width="30" height="30" fill="#FFEB3B"/>
+    <rect x="30"  y="0"   width="30" height="30" fill="#FFEB3B"/>
+    <rect x="0"   y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="30"  y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <!-- other -->
+    <rect x="60"  y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="30"  width="30" height="30" fill="#DDD"/>
+    <rect x="0"   y="60"  width="30" height="30" fill="#DDD"/>
+    <rect x="30"  y="60"  width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="60"  width="30" height="30" fill="#DDD"/>
+    <!-- labels -->
+    <text x="45" y="125" font-size="14" text-anchor="middle">(R U R') U (R U2 R')</text>
+    <text x="45" y="145" font-size="12" text-anchor="middle">0 CORNERS ORIENTED</text>
+  </g>
 
-    <!-- HTML: Common Elements -->
-    <div class="box">
-      <h2>HTML: Common Elements</h2>
-      <dl>
-        <dt>&lt;h1&gt;–&lt;h6&gt;</dt><dd>Headings, h1 is largest.</dd>
-        <dt>&lt;p&gt;</dt><dd>Paragraph.</dd>
-        <dt>&lt;div&gt;</dt><dd>Block container.</dd>
-        <dt>&lt;span&gt;</dt><dd>Inline container.</dd>
-        <dt>&lt;blockquote&gt;</dt><dd>Block quotation.</dd>
-        <dt>&lt;hr&gt;</dt><dd>Thematic break.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
-&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;div&gt;A div block&lt;/div&gt;
-&lt;span&gt;Inline text within a span&lt;/span&gt;
-&lt;blockquote&gt;A quote goes here.&lt;/blockquote&gt;
-&lt;hr /&gt;</code></pre>
-    </div>
+  <!-- CASE 2: 2 CORNERS ORIENTED (plus-shape) -->
+  <g id="case2" transform="translate(220,20)">
+    <rect x="0" y="0" width="90" height="90" fill="none" stroke="#000" stroke-width="2"/>
+    <!-- plus‐shape -->
+    <rect x="30"  y="0"   width="30" height="30" fill="#FFEB3B"/>
+    <rect x="0"   y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="30"  y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="60"  y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="30"  y="60"  width="30" height="30" fill="#FFEB3B"/>
+    <!-- other -->
+    <rect x="0"   y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="0"   y="60"  width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="60"  width="30" height="30" fill="#DDD"/>
+    <!-- labels -->
+    <text x="45" y="125" font-size="14" text-anchor="middle">(R U R') U (R U2 R')</text>
+    <text x="45" y="145" font-size="12" text-anchor="middle">2 CORNERS ORIENTED</text>
+  </g>
 
-    <!-- HTML: Text Formatting -->
-    <div class="box">
-      <h2>HTML: Text Formatting</h2>
-      <dl>
-        <dt>&lt;strong&gt;</dt><dd>Strong importance (bold).</dd>
-        <dt>&lt;em&gt;</dt><dd>Emphasis (italic).</dd>
-        <dt>&lt;b&gt;, &lt;i&gt;</dt><dd>Presentational bold/italic.</dd>
-        <dt>&lt;u&gt;</dt><dd>Underlined text.</dd>
-        <dt>&lt;small&gt;</dt><dd>Smaller text.</dd>
-        <dt>&lt;abbr title="…"&gt;</dt><dd>Abbreviation with tooltip.</dd>
-        <dt>&lt;code&gt;, &lt;pre&gt;</dt><dd>Code snippets / preformatted.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>&lt;strong&gt;Bold text&lt;/strong&gt;
-&lt;em&gt;Italic text&lt;/em&gt;
-&lt;b&gt;Also bold&lt;/b&gt; &lt;i&gt;Also italic&lt;/i&gt;
-&lt;u&gt;Underlined&lt;/u&gt;
-&lt;small&gt;Smaller text&lt;/small&gt;
-&lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;
-&lt;code&gt;console.log('Hello');&lt;/code&gt;
-&lt;pre&gt;Line 1
-Line 2&lt;/pre&gt;</code></pre>
-    </div>
+  <!-- CASE 3: 1 CORNER ORIENTED (straight line in middle) -->
+  <g id="case3" transform="translate(400,20)">
+    <rect x="0" y="0" width="90" height="90" fill="none" stroke="#000" stroke-width="2"/>
+    <!-- line shape -->
+    <rect x="0"   y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="30"  y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <rect x="60"  y="30"  width="30" height="30" fill="#FFEB3B"/>
+    <!-- other -->
+    <rect x="0"   y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="30"  y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="0"   width="30" height="30" fill="#DDD"/>
+    <rect x="0"   y="60"  width="30" height="30" fill="#DDD"/>
+    <rect x="30"  y="60"  width="30" height="30" fill="#DDD"/>
+    <rect x="60"  y="60"  width="30" height="30" fill="#DDD"/>
+    <!-- labels -->
+    <text x="45" y="125" font-size="14" text-anchor="middle">(R U R') U (R U2 R')</text>
+    <text x="45" y="145" font-size="12" text-anchor="middle">1 CORNER ORIENTED</text>
+  </g>
+</svg>
 
-    <!-- HTML: Lists -->
-    <div class="box">
-      <h2>HTML: Lists</h2>
-      <dl>
-        <dt>&lt;ul&gt; &amp; &lt;li&gt;</dt><dd>Unordered list.</dd>
-        <dt>&lt;ol&gt; &amp; &lt;li&gt;</dt><dd>Ordered list.</dd>
-        <dt>&lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</dt><dd>Description list.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>&lt;ul&gt;
-  &lt;li&gt;First item&lt;/li&gt;
-  &lt;li&gt;Second item&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;First step&lt;/li&gt;
-  &lt;li&gt;Second step&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;HTML&lt;/dt&gt;
-  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
-  &lt;dt&gt;CSS&lt;/dt&gt;
-  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
-&lt;/dl&gt;</code></pre>
-    </div>
-
-    <!-- HTML: Links & Media -->
-    <div class="box">
-      <h2>HTML: Links &amp; Media</h2>
-      <dl>
-        <dt>&lt;a href="URL" target="_blank"&gt;</dt><dd>Hyperlink.</dd>
-        <dt>&lt;img src="path" alt="desc" width height&gt;</dt><dd>Image.</dd>
-        <dt>&lt;video src controls&gt;&lt;/video&gt;</dt><dd>Video player.</dd>
-        <dt>&lt;audio src controls&gt;&lt;/audio&gt;</dt><dd>Audio player.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit example&lt;/a&gt;
-&lt;img src="image.jpg" alt="A sample image" width="200" height="150" /&gt;
-
-&lt;video src="movie.mp4" controls&gt;
-  Your browser does not support video.
-&lt;/video&gt;
-
-&lt;audio src="audio.mp3" controls&gt;
-  Your browser does not support audio.
-&lt;/audio&gt;</code></pre>
-    </div>
-
-    <!-- HTML: Tables & Forms -->
-    <div class="box">
-      <h2>HTML: Tables &amp; Forms</h2>
-      <dl>
-        <dt>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</dt><dd>Table structure.</dd>
-        <dt>&lt;form action="…" method="get/post"&gt;</dt><dd>Form tag.</dd>
-        <dt>&lt;input type="text|email|password|checkbox…"&gt;</dt><dd>Inputs.</dd>
-        <dt>&lt;textarea&gt;, &lt;select&gt;, &lt;option&gt;, &lt;button type="submit"&gt;</dt><dd>Other controls.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>&lt;table border="1"&gt;
-  &lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;
-  &lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;
-&lt;/table&gt;
-
-&lt;form action="/submit" method="post"&gt;
-  &lt;label&gt;Email:
-    &lt;input type="email" name="email" required /&gt;
-  &lt;/label&gt;&lt;br/&gt;
-  &lt;label&gt;Message:
-    &lt;textarea name="message"&gt;&lt;/textarea&gt;
-  &lt;/label&gt;&lt;br/&gt;
-  &lt;label&gt;Country:
-    &lt;select name="country"&gt;
-      &lt;option value="us"&gt;USA&lt;/option&gt;
-      &lt;option value="ca"&gt;Canada&lt;/option&gt;
-    &lt;/select&gt;
-  &lt;/label&gt;&lt;br/&gt;
-  &lt;button type="submit"&gt;Send&lt;/button&gt;
-&lt;/form&gt;</code></pre>
-    </div>
-
-    <!-- CSS: Syntax -->
-    <div class="box">
-      <h2>CSS: Syntax</h2>
-      <pre><code>selector {
-  property: value;
-}</code></pre>
-      <!-- the syntax itself is the example -->
-    </div>
-
-    <!-- CSS: Selectors -->
-    <div class="box">
-      <h2>CSS: Selectors</h2>
-      <dl>
-        <dt>element</dt><dd>Tag selector.</dd>
-        <dt>.class</dt><dd>Class selector.</dd>
-        <dt>#id</dt><dd>ID selector.</dd>
-        <dt>element element</dt><dd>Descendant.</dd>
-        <dt>element &gt; element</dt><dd>Child.</dd>
-        <dt>element + element</dt><dd>Adjacent sibling.</dd>
-        <dt>a:hover</dt><dd>Pseudo-class.</dd>
-        <dt>p::before</dt><dd>Pseudo-element.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>/* Tag selector */
-h1 { font-size: 2em; }
-/* Class selector */
-.highlight { background-color: yellow; }
-/* ID selector */
-#header { margin: 0 auto; }
-/* Descendant selector */
-ul li { list-style: none; }
-/* Child selector */
-nav > ul { padding: 0; }
-/* Adjacent sibling selector */
-h2 + p { margin-top: 0; }
-/* Pseudo-class */
-a:hover { text-decoration: underline; }
-/* Pseudo-element */
-p::before { content: "Note: "; }</code></pre>
-    </div>
-
-    <!-- CSS: Box Model -->
-    <div class="box">
-      <h2>CSS: Box Model</h2>
-      <dl>
-        <dt>margin</dt><dd>Outside spacing.</dd>
-        <dt>border</dt><dd>Outline.</dd>
-        <dt>padding</dt><dd>Inner spacing.</dd>
-        <dt>width, height</dt><dd>Content box size.</dd>
-        <dt>box-sizing</dt><dd>content-box | border-box.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>.box {
-  margin: 10px;
-  border: 2px solid #333;
-  padding: 8px;
-  width: 200px;
-  box-sizing: border-box;
-}</code></pre>
-    </div>
-
-    <!-- CSS: Typography -->
-    <div class="box">
-      <h2>CSS: Typography</h2>
-      <dl>
-        <dt>font-family</dt><dd>Font stack.</dd>
-        <dt>font-size</dt><dd>Text size.</dd>
-        <dt>font-weight</dt><dd>Thickness.</dd>
-        <dt>line-height</dt><dd>Line spacing.</dd>
-        <dt>text-align</dt><dd>Left/center/right/justify.</dd>
-        <dt>text-decoration</dt><dd>Underline/line-through.</dd>
-        <dt>color</dt><dd>Text color.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #222;
-}
-h2 {
-  font-weight: bold;
-  text-align: center;
-  text-decoration: underline;
-}</code></pre>
-    </div>
-
-    <!-- CSS: Background & Borders -->
-    <div class="box">
-      <h2>CSS: Background &amp; Borders</h2>
-      <dl>
-        <dt>background-color</dt><dd>Fill color.</dd>
-        <dt>background-image</dt><dd>URL or gradient.</dd>
-        <dt>background-size</dt><dd>cover | contain | auto.</dd>
-        <dt>border-radius</dt><dd>Rounded corners.</dd>
-        <dt>box-shadow</dt><dd>Shadow effect.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>.card {
-  background-color: #fff;
-  background-image: url("pattern.png");
-  background-size: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}</code></pre>
-    </div>
-
-    <!-- CSS: Layout -->
-    <div class="box">
-      <h2>CSS: Layout</h2>
-      <dl>
-        <dt>display</dt><dd>block | inline | inline-block | none.</dd>
-        <dt>position</dt><dd>static | relative | absolute | fixed | sticky.</dd>
-        <dt>top, right, bottom, left</dt><dd>Offsets.</dd>
-        <dt>overflow</dt><dd>visible | hidden | scroll | auto.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>.container {
-  display: inline-block;
-  position: relative;
-}
-.child {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  overflow: hidden;
-}</code></pre>
-    </div>
-
-    <!-- CSS: Flexbox -->
-    <div class="box">
-      <h2>CSS: Flexbox</h2>
-      <dl>
-        <dt>display: flex;</dt><dd>Container.</dd>
-        <dt>flex-direction</dt><dd>row | column.</dd>
-        <dt>justify-content</dt><dd>flex-start | center | space-between…</dd>
-        <dt>align-items</dt><dd>flex-start | center | stretch…</dd>
-        <dt>gap</dt><dd>Space between items.</dd>
-        <dt>flex: grow shrink basis</dt><dd>Item sizing.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
-}
-.nav-item {
-  flex: 1 1 0;
-}</code></pre>
-    </div>
-
-    <!-- CSS: Grid -->
-    <div class="box">
-      <h2>CSS: Grid</h2>
-      <dl>
-        <dt>display: grid;</dt><dd>Container.</dd>
-        <dt>grid-template-columns</dt><dd>e.g. 1fr 2fr.</dd>
-        <dt>grid-template-rows</dt><dd>e.g. auto 100px.</dd>
-        <dt>gap</dt><dd>Row/column gap.</dd>
-        <dt>grid-area</dt><dd>Named areas.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>.layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto 100px;
-  gap: 10px;
-}
-.header {
-  grid-area: 1 / 1 / 2 / 3;
-}</code></pre>
-    </div>
-
-    <!-- CSS: Colors & Units -->
-    <div class="box">
-      <h2>CSS: Colors &amp; Units</h2>
-      <dl>
-        <dt>Hex</dt><dd>#RRGGBB</dd>
-        <dt>rgb(), rgba()</dt><dd>Channel or with alpha.</dd>
-        <dt>hsl(), hsla()</dt><dd>Hue/sat/lightness.</dd>
-        <dt>px, em, rem</dt><dd>Absolute &amp; relative sizes.</dd>
-        <dt>%, vw, vh</dt><dd>Percent &amp; viewport units.</dd>
-      </dl>
-      <h3>Examples</h3>
-      <pre><code>body {
-  color: #333333;
-  background-color: rgba(240,240,240,0.8);
-  border-color: hsl(200, 50%, 50%);
-  font-size: 1rem;   /* based on root */
-  margin: 2vh 5vw;   /* responsive spacing */
-}</code></pre>
-    </div>
-
-  </div>
 </body>
 </html>
